@@ -30,30 +30,11 @@ Clone this, then...
 
 (there was is initialization here, therefore we win)
 
-2018-06-08 21:15:55 0 [Note] mysqld (mysqld 10.3.7-MariaDB-1:10.3.7+maria~jessie) starting as process 1 ...
-2018-06-08 21:15:55 0 [Note] InnoDB: Using Linux native AIO
-2018-06-08 21:15:55 0 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
-2018-06-08 21:15:55 0 [Note] InnoDB: Uses event mutexes
-2018-06-08 21:15:55 0 [Note] InnoDB: Compressed tables use zlib 1.2.8
-2018-06-08 21:15:55 0 [Note] InnoDB: Number of pools: 1
-2018-06-08 21:15:55 0 [Note] InnoDB: Using SSE2 crc32 instructions
-2018-06-08 21:15:55 0 [Note] InnoDB: Initializing buffer pool, total size = 256M, instances = 1, chunk size = 128M
-2018-06-08 21:15:55 0 [Note] InnoDB: Completed initialization of buffer pool
-2018-06-08 21:15:55 0 [Note] InnoDB: If the mysqld execution user is authorized, page cleaner thread priority can be changed. See the man page of setpriority().
-2018-06-08 21:15:56 0 [Note] InnoDB: 128 out of 128 rollback segments are active.
-2018-06-08 21:15:56 0 [Note] InnoDB: Creating shared tablespace for temporary tables
-2018-06-08 21:15:56 0 [Note] InnoDB: Setting file './ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
-2018-06-08 21:15:56 0 [Note] InnoDB: File './ibtmp1' size is now 12 MB.
-2018-06-08 21:15:56 0 [Note] InnoDB: 10.3.7 started; log sequence number 1639605; transaction id 39
-2018-06-08 21:15:56 0 [Note] InnoDB: Loading buffer pool(s) from /var/lib/mysql/ib_buffer_pool
-2018-06-08 21:15:56 0 [Note] Plugin 'FEEDBACK' is disabled.
-2018-06-08 21:15:56 0 [Note] Server socket created on IP: '::'.
-2018-06-08 21:15:56 0 [Warning] 'proxies_priv' entry '@% root@9977cc179be0' ignored in --skip-name-resolve mode.
-2018-06-08 21:15:56 0 [Note] InnoDB: Buffer pool(s) load completed at 180608 21:15:56
-2018-06-08 21:15:56 0 [Note] Reading of all Master_info entries succeded
-2018-06-08 21:15:56 0 [Note] Added new Master_info '' to hash table
-2018-06-08 21:15:56 0 [Note] mysqld: ready for connections.
-Version: '10.3.7-MariaDB-1:10.3.7+maria~jessie'  socket: '/var/run/mysqld/mysqld.sock'  port: 3306  mariadb.org binary distribution
+2019-03-06T11:50:00.814536Z 0 [Warning] [MY-011070] [Server] 'Disabling symbolic links using --skip-symbolic-links (or equivalent) is the default. Consider not using this option as it' is deprecated and will be removed in a future release.
+2019-03-06T11:50:00.814638Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.15) starting as process 1
+2019-03-06T11:50:02.662107Z 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
+2019-03-06T11:50:02.686250Z 0 [Warning] [MY-011810] [Server] Insecure configuration for --pid-file: Location '/var/run/mysqld' in the path is accessible to all OS users. Consider choosing a different directory.
+2019-03-06T11:50:02.708834Z 0 [System] [MY-010931] [Server] /usr/sbin/mysqld: ready for connections. Version: '8.0.15'  socket: '/var/run/mysqld/mysqld.sock'  port: 3306  MySQL Community Server - GPL.
 
 }> docker run -it --rm --link my-container mysql:latest mysql -hmy-container -uroot -proot myexample -e "select * from mytable;"
 +---------+
